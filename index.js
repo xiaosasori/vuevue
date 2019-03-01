@@ -41,7 +41,8 @@ const server = new ApolloServer({
     context: async ({req}) => {
       const token = req.headers['authorization']
       return { User, Post, currentUser: await getUser(token) }
-    }
+    },
+    playground: true
 })
 // Run
 server.listen({port: process.env.PORT || 4000}).then(({ url }) => {
