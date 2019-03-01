@@ -9,6 +9,9 @@
     "client": "npm run serve --prefix client",
     "dev": "concurrently --names \"server,client\" \"npm run server \" \"npm run client \""
   },
+  "engines": {
+    "node": "10.14.2"
+  },
   "keywords": [],
   "author": "Reed Barger",
   "license": "ISC",
