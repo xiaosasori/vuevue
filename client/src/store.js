@@ -83,7 +83,9 @@ export default new Vuex.Store({
         })
         .catch(err => {
           commit('setLoading', false);
-          console.error('getCurrentUser',err);
+          localStorage.removeItem('token')
+          router.push('/')
+          // console.error('getCurrentUser',err);
         });
     },
     getPosts({ commit }) {

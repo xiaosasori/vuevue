@@ -5,7 +5,7 @@
 			<v-toolbar color="accent" dark flat>
 				<v-toolbar-side-icon @click="toggleSideNav"></v-toolbar-side-icon>
 				<router-link to="/" tag="span" style="cursor: pointer">
-					<h1 class="title pl-3">VueShare</h1>
+					<h1 class="title pl-3">VueVue</h1>
 				</router-link>
 			</v-toolbar>
 			<v-divider></v-divider>
@@ -36,7 +36,7 @@
 			<!-- App Title -->
 			<v-toolbar-side-icon @click="toggleSideNav"></v-toolbar-side-icon>
 			<v-toolbar-title class="hidden-xs-only">
-				<router-link to="/" tag="span" style="cursor: pointer">VueShare</router-link>
+				<router-link to="/" tag="span" style="cursor: pointer">VueVue</router-link>
 			</v-toolbar-title>
 			<v-spacer></v-spacer>
 			<!-- search input -->

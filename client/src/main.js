@@ -69,6 +69,8 @@ new Vue({
   store,
   render: h => h(App),
   created(){
-    this.$store.dispatch('getCurrentUser')
+    const token = localStorage.getItem('token')
+    if(token)
+      this.$store.dispatch('getCurrentUser')
   }
 }).$mount('#app')

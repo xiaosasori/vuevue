@@ -51,7 +51,7 @@ export default {
       this.$store.dispatch("getPosts");
     },
     gotoPost(postId){
-      this.$router.push(`/post/${postId}`)
+      this.$router.push(`/posts/${postId}`)
     }
   },
   computed: {

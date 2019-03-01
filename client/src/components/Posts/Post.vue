@@ -55,7 +55,7 @@
       <!-- Messages -->
       <v-layout row wrap>
         <v-flex xs12>
-          <v-list subheader two-line expand>
+          <v-list subheader two-line>
             <v-subheader>Messages ({{getPost.messages.length}})</v-subheader>
 
             <template v-for="message in getPost.messages">
@@ -72,7 +72,7 @@
                   </v-list-tile-title>
                   <v-list-tile-sub-title>
                     {{message.messageUser.username}}
-                    <span class="grey--text text--lighten-1 hidden-xs-only">{{message.messageDate}}</span>
+                    <span class="grey--text text--lighten-1 hidden-xs-only">{{getTimeFromNow(message.messageDate)}}</span>
                   </v-list-tile-sub-title>
                 </v-list-tile-content>
 
@@ -92,6 +92,7 @@
 </template>
 
 <script>
+import moment from "moment-timezone";
 import { mapGetters } from "vuex";
 import {
   GET_POST,
@@ -130,6 +131,9 @@ export default {
     ...mapGetters(["user", "userFavorites"])
   },
   methods: {
+    getTimeFromNow(time) {
+      return moment(Number(time)).fromNow();
+    },
     checkIfPostLiked(postId) {
       // check if user favorites includes post with id of 'postId'
       if (
