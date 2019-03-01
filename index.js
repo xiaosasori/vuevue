@@ -42,6 +42,7 @@ const server = new ApolloServer({
       const token = req.headers['authorization']
       return { User, Post, currentUser: await getUser(token) }
     },
+    introspection: true,
     playground: true
 })
 // Run
