@@ -1,5 +1,5 @@
 {
-  "name": "fullstack-vue-graphql-starter",
+  "name": "vuevue",
   "version": "1.0.0",
   "description": "Starter for Full-Stack Vue-GraphQL-Apollo Projects",
   "main": "server.js",
@@ -13,7 +13,6 @@
     "node": "10.14.2"
   },
   "keywords": [],
-  "author": "Reed Barger",
   "license": "ISC",
   "dependencies": {
     "apollo-server": "^2.3.1",
